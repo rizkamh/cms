@@ -53,48 +53,58 @@ Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 
 // PRAKTIKUM 3
 
-Route::get('/', function () {
-    echo "Hallo! Selamat Datang";
+// Route::get('/', function () {
+//     echo "Hallo! Selamat Datang";
+// });
+
+// Route::prefix('category') -> group(function () {
+//     Route::get("/marbel-edu-games", function () {
+//         echo "Halaman Marbel Edu Games";
+//     });
+//     Route::get("/marbel-and-friends-kids-games", function () {
+//         echo "Halaman Marbel and Friends Kids Games";
+//     });
+//     Route::get("/riri-story-books", function () {
+//         echo "Halaman Riri Stroy Books";
+//     });
+//     Route::get("/kolak-kids-songs", function () {
+//         echo "Halaman Kolak Kids Songs";
+//     });
+// });
+
+// Route::prefix('news') -> group(function () {
+//     Route::get("", function () {
+//         echo "Ini Merupakan Halaman NEWS";
+//     });
+//     Route::get("/educa-studio-berbagi-untuk-warga-sekitar-terdampak-covid-19", function () {
+//         echo "Ini Merupakan Halaman Studio Berbagi Untuk Warga Sekitar Terdampak Covid-19";
+//     });
+// });
+
+// Route::prefix('program') -> group(function () {
+//     Route::get("/karir" , function () {
+//         echo "Ini adalah Halaman Karir";
+//     });
+//     Route::get("/magang" , function () {
+//         echo "Ini adalah Halaman Magang";
+//     });
+//     Route::get("/kunjungan-industri" , function () {
+//         echo "Ini adalah Halaman Kunjungan Industri";
+//     });
+// });
+
+// Route::get("/about-us" , function () {
+//         echo "Nama  : Rizka Musyarofatul Hidayah <br>";
+//         echo "NIM   : 2041720095 <br>";
+//         echo "Kelas : TI-2G";
+// });
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Jobsheet 3
+
+Route::get('/', function(){
+    return view('home');
 });
 
-Route::prefix('category') -> group(function () {
-    Route::get("/marbel-edu-games", function () {
-        echo "Halaman Marbel Edu Games";
-    });
-    Route::get("/marbel-and-friends-kids-games", function () {
-        echo "Halaman Marbel and Friends Kids Games";
-    });
-    Route::get("/riri-story-books", function () {
-        echo "Halaman Riri Stroy Books";
-    });
-    Route::get("/kolak-kids-songs", function () {
-        echo "Halaman Kolak Kids Songs";
-    });
-});
-
-Route::prefix('news') -> group(function () {
-    Route::get("", function () {
-        echo "Ini Merupakan Halaman NEWS";
-    });
-    Route::get("/educa-studio-berbagi-untuk-warga-sekitar-terdampak-covid-19", function () {
-        echo "Ini Merupakan Halaman Studio Berbagi Untuk Warga Sekitar Terdampak Covid-19";
-    });
-});
-
-Route::prefix('program') -> group(function () {
-    Route::get("/karir" , function () {
-        echo "Ini adalah Halaman Karir";
-    });
-    Route::get("/magang" , function () {
-        echo "Ini adalah Halaman Magang";
-    });
-    Route::get("/kunjungan-industri" , function () {
-        echo "Ini adalah Halaman Kunjungan Industri";
-    });
-});
-
-Route::get("/about-us" , function () {
-        echo "Nama  : Rizka Musyarofatul Hidayah <br>";
-        echo "NIM   : 2041720095 <br>";
-        echo "Kelas : TI-2G";
-});

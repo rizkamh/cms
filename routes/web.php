@@ -104,7 +104,10 @@ Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 
 // Jobsheet 3
 
-Route::get('/', function(){
-    return view('home');
-});
+// Route::get('/', function(){
+//     return view('home');
+// });
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
